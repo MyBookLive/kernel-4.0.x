@@ -1039,18 +1039,6 @@ diff -urN linux-4.0.1/drivers/leds/Makefile linux-4.0.1-wd1/drivers/leds/Makefil
  # LED SPI Drivers
  obj-$(CONFIG_LEDS_DAC124S085)		+= leds-dac124s085.o
  
-diff -urN linux-4.0.1/fs/ext4/mballoc.c linux-4.0.1-wd1/fs/ext4/mballoc.c
---- linux-4.0.1/fs/ext4/mballoc.c	2015-04-29 11:22:30.000000000 +0300
-+++ linux-4.0.1-wd1/fs/ext4/mballoc.c	2015-05-02 22:19:57.702639194 +0300
-@@ -668,7 +668,7 @@
- 	ext4_grpblk_t min;
- 	ext4_grpblk_t max;
- 	ext4_grpblk_t chunk;
--	unsigned short border;
-+	unsigned int border;
- 
- 	BUG_ON(len > EXT4_CLUSTERS_PER_GROUP(sb));
- 
 diff -urN linux-4.0.1/include/linux/leds.h linux-4.0.1-wd1/include/linux/leds.h
 --- linux-4.0.1/include/linux/leds.h	2015-04-29 11:22:30.000000000 +0300
 +++ linux-4.0.1-wd1/include/linux/leds.h	2015-05-02 17:35:27.099690732 +0300
